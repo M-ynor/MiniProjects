@@ -1,11 +1,11 @@
-import React from 'react'
 import { Card, Sidebar } from './index'
 
 function Content() {
     return (
-        <div>
+        <div className='flex h-screen bg-DarkBg'>
             <Sidebar />
-            <Card />
+                <h1 className=''>Content</h1>
+                <Card />
         </div>
     )
 }
