@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { fadeAnimation, slideAnimation, headTextAnimation } from "../config/motion";
+import { fadeAnimation, slideAnimation } from "../config/motion";
 import { Icon } from '@iconify/react';
 
 const moonToSunny = "line-md:sunny-outline-to-moon-loop-transition";

@@ -4,7 +4,9 @@ function Content() {
     return (
         <div className='flex h-screen bg-DarkBg'>
             <Sidebar />
-                <h1 className=''>Content</h1>
+                <h1 className=''>
+                    Content
+                </h1>
                 <Card />
         </div>
     )
