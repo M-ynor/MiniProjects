@@ -29,7 +29,7 @@ export const fadeAnimation = {
     },
     animate: {
         opacity: 1,
-        transition: { ...transition, delay: 0 },
+        transition: { ...transition, delay: 0.4 },
     },
     exit: {
         opacity: 0,
@@ -42,7 +42,7 @@ export const headTextAnimation = {
     animate: { x: 0, opacity: 1 },
     transition: {
         type: "spring",
-        damping: 5,
+        damping: 5.5,
         stiffness: 40,
         restDelta: 0.001,
         duration: 0.3,
@@ -58,7 +58,7 @@ export const headContentAnimation = {
         stiffness: 30,
         restDelta: 0.001,
         duration: 0.6,
-        delay: 0.2,
+        delay: 0.5,
         delayChildren: 0.2,
     },
 };
