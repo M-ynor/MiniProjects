@@ -2,7 +2,7 @@ import { Card, Sidebar } from './index'
 
 function Content() {
     return (
-        <div className='flex h-screen bg-DarkBg'>
+        <div className='flex h-screen bg-white dark:bg-DarkBg  '>
             <Sidebar />
                 <h1 className=''>
                     Content
