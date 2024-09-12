@@ -30,7 +30,7 @@ const Sidebar = forwardRef((props, ref) => {
             <motion.div className='flex mt-12 gap-x-3 p-1 items-center justify-center' {...headTextAnimation}>
               <p className='text-4xl text-Green font-semibold h-fit'>MiniProjects</p>
               <motion.button
-                className={`flex justify-center items-center w-12 h-12 text-Green ${isSunny ? 'hover:text-yellow-300' : 'hover:text-gray-400'}`}
+                className={`flex justify-center items-center w-12 h-12 text-Green ${isSunny ? 'hover:text-Sun' : 'hover:text-gray-400'}`}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.8 }}
                 onClick={toggleIcon}
