@@ -2,7 +2,7 @@ import { Card, Sidebar, Navbar } from './index';
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { fadeAnimation } from '../config/motion';
-import useResponsive from '../config/useResponsive';
+import useResponsive from '../hooks/useResponsive';
 
 
 function Content() {

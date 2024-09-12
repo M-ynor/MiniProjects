@@ -34,7 +34,7 @@ function Navbar() {
                         <motion.div {...slideAnimation("left")}
                             className='fixed inset-0 z-50 flex w-fit'
                         >
-                            <div className='absolute  bg-black'></div>
+                            <div className='absolute bg-black'></div>
                             <Sidebar />
                         </motion.div>
                     ) : null}

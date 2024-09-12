@@ -1,7 +1,6 @@
 import React, { useState, forwardRef, useImperativeHandle } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Icon } from '@iconify/react';
-import useResponsive from '../config/useResponsive';
 import { fadeAnimation, slideAnimation, headTextAnimation } from "../config/motion";
 
 const moonToSunny = "line-md:sunny-outline-to-moon-loop-transition";
@@ -11,7 +10,6 @@ const categories = ['All', 'Game', 'Productivity', 'Utility'];
 const Sidebar = forwardRef((props, ref) => {
   const [isSunny, setIsSunny] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const { isAboveBreakpoint, isBelowBreakpoint } = useResponsive(100);
 
   const toggleIcon = () => {
     setIsSunny(!isSunny);
@@ -25,7 +23,6 @@ const Sidebar = forwardRef((props, ref) => {
   return (
     <div>
       <AnimatePresence>
-        {isAboveBreakpoint && (
           <motion.div {...slideAnimation("down")} className={`w-[30vh] sm:w-[35vh] lg:w-[40vh] h-screen flex flex-col gap-y-3 ${isSunny ? 'bg-DarkSideBarBg' : 'bg-LightSideBarBg'}`}>
             <motion.div className='flex mt-12 gap-x-3 p-1 items-center justify-center' {...headTextAnimation}>
               <p className='text-3xl sm:text-4xl lg:text-4xl 2xl:text-5xl  text-Green font-semibold h-fit'>MiniProjects</p>
@@ -62,7 +59,6 @@ const Sidebar = forwardRef((props, ref) => {
               ))}
             </motion.div>
           </motion.div>
-        )}
       </AnimatePresence>
     </div>
   );
