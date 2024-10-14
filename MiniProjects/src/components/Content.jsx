@@ -14,7 +14,7 @@ function Content() {
     return (
         <>
             {/*mobile*/}
-            {isBelowBreakpoint && (<div className={`flex flex-col h-screen ${isSunny ? "bg-black" : "bg-LightBg"}`}>
+            {isBelowBreakpoint && (<div className={`flex flex-col h-screen ${isSunny ? "bg-DarkBg" : "bg-LightBg"}`}>
                 <Navbar />
                 <div className='flex flex-col items-center justify-center flex-grow'>
                     <h1 className='w-full h-full m-10 text-white'>
@@ -29,7 +29,7 @@ function Content() {
                 </div>
             </div>)}
             {/*desktup*/}
-            {isAboveBreakpoint && (<div className={`flex flex-row h-screen ${isSunny ? "bg-black" : "bg-LightBg"}`}>
+            {isAboveBreakpoint && (<div className={`flex flex-row h-screen ${isSunny ? "bg-DarkBg" : "bg-LightBg"}`}>
                 <div>
                     <Sidebar />
                 </div>
