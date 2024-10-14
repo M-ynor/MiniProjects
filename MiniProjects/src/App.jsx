@@ -1,10 +1,13 @@
-import {Content} from "./components/index";
+import { Content } from "./components/index";
+import { SunnyProvider } from "./config/SunnyContext.jsx";
 
 function App() {
 
   return (
     <>
-      <Content />
+      <SunnyProvider>
+        <Content />
+      </SunnyProvider>
     </>
   )
 }

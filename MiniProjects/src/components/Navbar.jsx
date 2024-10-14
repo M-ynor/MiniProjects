@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useContext } from 'react';
+import { SunnyContext } from '../config/SunnyContext.jsx';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Icon } from '@iconify/react';
 import Sidebar from './Sidebar';
@@ -9,6 +10,8 @@ const menuOpen = "line-md:close-to-menu-transition";
 
 function Navbar() {
     const [menu, setMenu] = useState(false);
+    const { isSunny } = useContext(SunnyContext);
+
 
     const toggleMenu = () => {
         setMenu(!menu);
@@ -16,7 +19,7 @@ function Navbar() {
 
     return (
         <div className=''>
-            <motion.nav {...slideAnimation("down")} className={`w-full h-16 sm:h-24 flex items-center justify-between bg-black mt-3`}>
+            <motion.nav {...slideAnimation("down")} className={`w-full h-16 sm:h-24 flex items-center justify-between ${isSunny ? "bg-black" : "bg-LightBg"}`}>
                 <motion.div className='flex items-center h-fit'>
                     <p className='text-4xl text-Green font-semibold h-fit pl-5 sm:text-[4.5vh] sm:pl-10 '>MiniProjects</p>
                 </motion.div>
@@ -33,9 +36,9 @@ function Navbar() {
                 {menu && (
                     <motion.div
                         key="menu"
-                        initial={{ opacity: 0 }}
+                        initial={{ opacity: 1 }}
                         animate={{ opacity: 1 }}
-                        exit={{ opacity: 0, transition: { duration: 0.5 } }}
+                        exit={{ x: '-100%', opacity: 1, transition: { duration: 0.5 } }}
                         className='fixed inset-0 z-50 flex w-fit'
                     >
                         <div className='absolute bg-black'></div>
