@@ -38,6 +38,21 @@ export const fadeAnimation = {
     },
 };
 
+export const fadeAnimationAfter = {
+  initial: {
+    opacity: 0,
+    transition: { ...transition, delay: 2 }, // Retraso antes de iniciar la animación
+  },
+  animate: {
+    opacity: 1,
+    transition: { ...transition, delay: 1 }, // Retraso antes de iniciar la animación
+  },
+  exit: {
+    opacity: 0,
+    transition: { ...transition, delay: 0}, // Sin retraso al salir
+  },
+};
+
 export const headTextAnimation = {
     initial: { x: 100, opacity: 0 },
     animate: { x: 0, opacity: 1 },
