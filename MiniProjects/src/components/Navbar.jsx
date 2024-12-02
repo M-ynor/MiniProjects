@@ -19,7 +19,7 @@ function Navbar() {
 
     return (
         <div className=''>
-            <motion.nav {...slideAnimation("down")} className={`w-full h-16 sm:h-24 flex items-center justify-between ${isSunny ? "bg-black" : "bg-LightBg"}`}>
+            <motion.nav {...slideAnimation("down")} className={`transition-colors duration-300 w-full h-16 sm:h-24 flex items-center justify-between ${isSunny ? "bg-black" : "bg-LightBg"}`}>
                 <motion.div className='flex items-center h-fit'>
                     <p className='text-4xl text-Green font-semibold h-fit pl-5 sm:text-[4.5vh] sm:pl-10 '>MiniProjects</p>
                 </motion.div>
