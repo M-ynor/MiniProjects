@@ -22,7 +22,7 @@ function Card({ image, title, description, GoToprojectUrl }) {
         />
         <h1 className={`w-[90%] text-start font-bold 2xl:text-lg ${isSunny ? 'text-white' : 'text-black'}`}>{title? title : 'title not available'}</h1>
         <p className='w-[90%] text-start 2xl:text-lg text-gray-400'>{description? description : 'Description not avaiable'}</p>
-        <button onClick={GoToprojectUrl} className='hover:bg-[#1ED760] ml-1 m-1 text-center text-xl rounded-lg w-[90%] h-[12%] 2xl:h-10 2xl:text-lg font-semibold bg-Green'>Launch Project {`>`} </button>
+        <button onClick={GoToprojectUrl} className={`hover:bg-[#1ED760] ml-1 m-1 text-center text-xl rounded-lg w-[90%] h-[12%] 2xl:h-10 2xl:text-lg font-semibold bg-Green ${isSunny ? 'text-black' : 'text-white'}`}>Launch Project {`>`} </button>
       </motion.div>
     </AnimatePresence>
   )
