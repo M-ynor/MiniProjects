@@ -31,7 +31,7 @@ function Navbar() {
                 >
                     <Icon key={menu ? 'closed' : 'open'} icon={menu ? menuClosed : menuOpen} width="40" height="35" />
                 </motion.button>
-            </motion.nav>
+            </motion.nav>                           
             <AnimatePresence>
                 {menu && (
                     <motion.div

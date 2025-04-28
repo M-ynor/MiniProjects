@@ -9,15 +9,15 @@ const sunnyToMoon = "line-md:moon-to-sunny-outline-loop-transition";
 
 
 function Card({ image, title, description, GoToprojectUrl }) {
-
+  
   const { isSunny, setIsSunny } = useContext(SunnyContext);
 
   return (
     <AnimatePresence>
       <motion.div {...slideAnimation("right")} className={`flex flex-col items-center gap-y-[3%] w-52 h-52 sm:w-80 sm:h-80 2xl:w-96 2xl:h-96 ${isSunny ? 'bg-DarkCardBg' : 'bg-LightCardBg'} transition-colors duration-300 rounded-lg`}>
-        <img 
+        <img
         src={image} 
-        alt={`${image? {image} : 'image not avaiable'}`} 
+        alt={`${image? '' : 'image not avaiable'}`} 
         className={`text-center object-cover w-full h-[60%] ${isSunny? 'text-white' : 'text-black'} transition-colors duration-300`}
         />
         <h1 className={`w-[90%] text-start font-bold 2xl:text-lg ${isSunny ? 'text-white' : 'text-black'}`}>{title? title : 'title not available'}</h1>
